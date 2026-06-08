@@ -151,7 +151,7 @@ section.block{padding:60px 0;border-top:1px solid var(--line)}
 .mode{border:1px solid var(--line);background:var(--bg-2);margin-bottom:26px;overflow:hidden}
 .mode-top{display:flex;align-items:center;justify-content:space-between;gap:16px;
   padding:24px 30px;border-bottom:1px solid var(--line);flex-wrap:wrap}
-.mode-top .left{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+.mode-top .left{display:flex;flex-direction:column;align-items:flex-start;gap:5px}
 .mode-type{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--amber);
   text-transform:uppercase}
 .mode-name{font-family:var(--display);font-size:34px;font-weight:800;text-transform:uppercase;
@@ -258,11 +258,54 @@ footer p a:hover{border-bottom-color:var(--amber)}
 
 /* ===== 반응형 ===== */
 @media(max-width:780px){
+  .wrap{padding:0 18px}
   .feat-grid{grid-template-columns:1fr}
   .stats{grid-template-columns:repeat(2,1fr)}
   .stat:nth-child(2){border-right:none}
   .obj-grid{grid-template-columns:1fr}
   .topbar .wrap{height:auto;padding-top:10px;padding-bottom:10px;flex-wrap:wrap;gap:8px}
+
+  .hero{padding:64px 0 48px}
+  .hero-logo{width:min(560px,100%)}
+  .hero .sub{margin-bottom:22px}
+  .hero p.lead{font-size:15px}
+  section.block{padding:44px 0}
+  .sec-head{margin-bottom:28px;gap:10px 14px}
+  .feat{padding:24px 22px}
+
+  .mode-top{padding:20px 22px}
+  .mode-name{font-size:28px}
+  .mode-name .eng{font-size:12.5px;margin-left:7px}
+  .mode-body{padding:22px}
+  .map-score{padding:16px 16px}
+  .map-score th,.map-score td{padding:9px 2px}
+
+  .obj{padding:20px 18px}
+  .media .cap,.score-note{font-size:11px}
+}
+
+@media(max-width:480px){
+  .wrap{padding:0 14px}
+  .kicker{font-size:11px;letter-spacing:.2em;margin-bottom:16px}
+  .kicker::before{width:24px}
+  .hero{padding:52px 0 40px}
+  .hero .sub{font-size:18px}
+  .badges{gap:8px;margin-top:24px}
+  .badge{font-size:10px;padding:6px 10px}
+  .steam-link{width:100%;justify-content:center;font-size:12px;padding:14px 16px}
+
+  .stats{grid-template-columns:1fr}
+  .stat{border-right:none;border-bottom:1px solid var(--line-2)}
+  .stat:last-child{border-bottom:none}
+
+  .mode-top{padding:18px 16px}
+  .mode-name{font-size:24px}
+  .mode-name .eng{display:block;margin-left:0;margin-top:3px}
+  .mode-body{padding:18px 16px}
+  .mode-map{font-size:12px}
+
+  .feat h3{font-size:23px}
+  .obj .chip{font-size:14px}
 }
 </style>
 </head>
